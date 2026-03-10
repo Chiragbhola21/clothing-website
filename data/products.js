@@ -14,12 +14,12 @@ export const products = [
     price: 1999,
     originalPrice: 2999,
     discount: 33,
-    image: '/images/products/prod6.jpeg',
+    image: '/images/products/prod9.jpeg',
     images: [
-      '/images/products/prod6.jpeg', 
       '/images/products/prod9.jpeg', 
       '/images/products/prod8.jpeg', 
-      '/images/products/prod10.jpeg'
+      '/images/products/prod10.jpeg',
+      '/images/products/prod6.jpeg'
     ],
     badge: 'BESTSELLER',
     sizes: ['S', 'M', 'L', 'XL'],
@@ -137,25 +137,7 @@ export const products = [
     reviews: 890,
     gender: 'Men',
   },
-  {
-    id: 7,
-    name: 'Levi\'s Classic Batwing Logo Tee',
-    slug: 'levis-classic-batwing-logo-tee',
-    category: 'T-Shirts',
-    categoryId: 't-shirts',
-    price: 1199,
-    originalPrice: 1799,
-    discount: 33,
-    image: '/images/products/prod11.jpeg',
-    images: ['/images/products/prod11.jpeg'],
-    badge: null,
-    sizes: ['S', 'M', 'L', 'XL'],
-    colors: ['Black', 'Grey', 'Dark Grey', 'Olive', 'Tan'],
-    description: 'The original denim brand delivers the perfect t-shirt. Featuring the iconic batwing logo across the chest, this tee is designed to pair perfectly with your favorite pair of jeans.',
-    rating: 4.5,
-    reviews: 432,
-    gender: 'Men',
-  },
+
   {
     id: 8,
     name: 'Louis Vuitton V-Monogram Graphic Tee',
