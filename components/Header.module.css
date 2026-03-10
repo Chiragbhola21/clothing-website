@@ -234,6 +234,7 @@
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    order: 1;
   }
 
   .nav {
@@ -244,19 +245,42 @@
     display: flex;
   }
 
-  .searchWrapper {
-    min-width: 140px;
+  .container {
+    padding: 15px 1rem;
+    flex-wrap: wrap;
+    height: auto;
   }
 
-  .searchWrapper.searchActive {
-    min-width: 180px;
+  .logo {
+    position: static;
+    transform: none;
+    order: 2;
+    margin-right: auto;
+    margin-left: 15px;
   }
 
   .logoText {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
-  .container {
-    padding: 0 1rem;
+  .rightSection {
+    order: 3;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .searchWrapper {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .searchWrapper.searchActive {
+    min-width: 100%;
+  }
+
+  .icons {
+    position: absolute;
+    top: 16px;
+    right: 1rem;
   }
 }
