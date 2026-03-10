@@ -27,79 +27,12 @@
   height: 72px;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.hamburgerLine {
-  width: 22px;
-  height: 2px;
-  background: #2d2d2d;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.hamburgerLine.open:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburgerLine.open:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburgerLine.open:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.nav {
-  display: flex;
-  gap: 2rem;
-}
-
-.navLink {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #2d2d2d;
-  text-decoration: none;
-  padding: 8px 4px;
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.navLink::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #e41b23;
-  transition: width 0.3s ease;
-}
-
-.navLink:hover {
-  color: #e41b23;
-}
-
-.navLink:hover::after {
-  width: 100%;
-}
 
 .logo {
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .logoIcon {
@@ -201,50 +134,8 @@
   justify-content: center;
 }
 
-.mobileMenu {
-  display: none;
-  flex-direction: column;
-  background: #fff;
-  padding: 0 2rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-.mobileMenuOpen {
-  max-height: 300px;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #eee;
-}
-
-.mobileLink {
-  padding: 12px 0;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #2d2d2d;
-  text-decoration: none;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.mobileLink:hover {
-  color: #e41b23;
-}
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-    order: 1;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .mobileMenu {
-    display: flex;
-  }
-
   .container {
     padding: 15px 1rem;
     flex-wrap: wrap;
@@ -252,11 +143,8 @@
   }
 
   .logo {
-    position: static;
-    transform: none;
-    order: 2;
+    order: 1;
     margin-right: auto;
-    margin-left: 15px;
   }
 
   .logoText {

@@ -2,14 +2,6 @@ export const categories = [
   { id: 'trending', name: 'Trending' },
   { id: 't-shirts', name: 'T-Shirts' },
   { id: 'oversized-tees', name: 'Oversized T-Shirts' },
-  { id: 'shirts', name: 'Shirts' },
-  { id: 'polos', name: 'Polos' },
-  { id: 'jeans', name: 'Jeans' },
-  { id: 'joggers', name: 'Joggers' },
-  { id: 'hoodies', name: 'Hoodies' },
-  { id: 'jackets', name: 'Jackets' },
-  { id: 'sneakers', name: 'Sneakers' },
-  { id: 'accessories', name: 'Accessories' },
 ];
 
 export const products = [
@@ -124,7 +116,7 @@ export const products = [
     description: 'A striking graphic t-shirt adorned with stylized LV monogram artwork. Perfect for layering under a jacket or wearing standalone to make a luxury fashion statement.',
     rating: 4.5,
     reviews: 76,
-    gender: 'Women',
+    gender: 'Men',
   },
   {
     id: 6,

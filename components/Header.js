@@ -6,7 +6,6 @@ import styles from './Header.module.css';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
   const { totalItems, toggleCart } = useCart();
 
@@ -19,23 +18,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
-        {/* Hamburger */}
-        <button
-          className={styles.hamburger}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`${styles.hamburgerLine} ${mobileMenuOpen ? styles.open : ''}`}></span>
-          <span className={`${styles.hamburgerLine} ${mobileMenuOpen ? styles.open : ''}`}></span>
-          <span className={`${styles.hamburgerLine} ${mobileMenuOpen ? styles.open : ''}`}></span>
-        </button>
 
-        {/* Nav Links */}
-        <nav className={styles.nav}>
-          <Link href="/products?gender=Men" className={styles.navLink}>MEN</Link>
-          <Link href="/products?gender=Women" className={styles.navLink}>WOMEN</Link>
-          <Link href="/products?category=sneakers" className={styles.navLink}>SNEAKERS</Link>
-        </nav>
 
         {/* Logo */}
         <Link href="/" className={styles.logo}>
@@ -88,12 +71,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
-        <Link href="/products?gender=Men" className={styles.mobileLink} onClick={() => setMobileMenuOpen(false)}>MEN</Link>
-        <Link href="/products?gender=Women" className={styles.mobileLink} onClick={() => setMobileMenuOpen(false)}>WOMEN</Link>
-        <Link href="/products?category=sneakers" className={styles.mobileLink} onClick={() => setMobileMenuOpen(false)}>SNEAKERS</Link>
-      </div>
     </header>
   );
 }

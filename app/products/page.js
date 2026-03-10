@@ -23,7 +23,7 @@ function ProductListingInner() {
 
     if (selectedCategory) {
       filtered = filtered.filter(p =>
-        p.categoryId === selectedCategory || p.category.toLowerCase().includes(selectedCategory.toLowerCase())
+        p.categoryId === selectedCategory || p.category.toLowerCase() === selectedCategory.toLowerCase()
       );
     }
 
