@@ -16,6 +16,7 @@ function ProductListingInner() {
   const [selectedCategory, setSelectedCategory] = useState(categoryParam);
   const [sortBy, setSortBy] = useState('popular');
   const [priceRange, setPriceRange] = useState('all');
+  const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
   const filteredProducts = useMemo(() => {
     let filtered = [...products];
@@ -74,8 +75,16 @@ function ProductListingInner() {
           </div>
 
           <div className={styles.layout}>
-            {/* Sidebar */}
-            <aside className={styles.sidebar}>
+            {/* Sidebar / Mobile Drawer */}
+            <div className={`${styles.sidebarOverlay} ${isMobileFiltersOpen ? styles.open : ''}`} onClick={() => setIsMobileFiltersOpen(false)} />
+            <aside className={`${styles.sidebar} ${isMobileFiltersOpen ? styles.open : ''}`}>
+              <div className={styles.sidebarHeader}>
+                <h2>Filters</h2>
+                <button className={styles.closeBtn} onClick={() => setIsMobileFiltersOpen(false)}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="24" height="24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </button>
+              </div>
+              <div className={styles.sidebarScroll}>
               <div className={styles.filterSection}>
                 <h3 className={styles.filterTitle}>CATEGORIES</h3>
                 <button
@@ -113,12 +122,21 @@ function ProductListingInner() {
                   </button>
                 ))}
               </div>
+              </div>
             </aside>
 
             {/* Products */}
             <div className={styles.productsArea}>
               <div className={styles.toolbar}>
-                <p className={styles.resultCount}>{filteredProducts.length} Products</p>
+                <div className={styles.toolbarLeft}>
+                  <p className={styles.resultCount}>{filteredProducts.length} Products</p>
+                  <button className={styles.mobileFilterBtn} onClick={() => setIsMobileFiltersOpen(true)}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
+                      <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                    </svg>
+                    Filters
+                  </button>
+                </div>
                 <select
                   className={styles.sortSelect}
                   value={sortBy}
