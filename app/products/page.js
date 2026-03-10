@@ -22,9 +22,13 @@ function ProductListingInner() {
     let filtered = [...products];
 
     if (selectedCategory) {
-      filtered = filtered.filter(p =>
-        p.categoryId === selectedCategory || p.category.toLowerCase() === selectedCategory.toLowerCase()
-      );
+      if (selectedCategory === 'trending') {
+        filtered = filtered.filter(p => p.badge === 'TRENDING' || p.badge === 'NEW');
+      } else {
+        filtered = filtered.filter(p =>
+          p.categoryId === selectedCategory || p.category.toLowerCase() === selectedCategory.toLowerCase()
+        );
+      }
     }
 
     if (genderParam) {
