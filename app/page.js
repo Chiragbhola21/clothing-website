@@ -8,7 +8,7 @@ import { products } from '@/data/products';
 
 export default function Home() {
   const newArrivals = products.filter(p => p.badge === 'NEW' || p.badge === 'TRENDING').slice(0, 8);
-  const bestSellers = products.filter(p => p.badge === 'BESTSELLER' || p.rating >= 4.4).slice(0, 8);
+  const mensCollection = products.filter(p => p.gender === 'Men').slice(0, 8);
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function Home() {
         <CategoryChips />
         <ProductGrid title="New Arrivals" products={newArrivals} />
         <BrandBanner />
-        <ProductGrid title="Bestsellers" products={bestSellers} />
+        <ProductGrid title="Men's Collection" products={mensCollection} viewAllLink="/products" />
       </main>
       <Footer />
     </>
