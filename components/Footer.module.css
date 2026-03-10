@@ -1,0 +1,196 @@
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding-top: 4rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.newsletter {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.nlTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.nlText {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.nlForm {
+  display: flex;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nlInput {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.nlInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.nlBtn {
+  padding: 14px 28px;
+  background: #e41b23;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: inherit;
+}
+
+.nlBtn:hover {
+  background: #c8151d;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.colTitle {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.linkCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.link:hover {
+  color: #e41b23;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social:hover {
+  background: #e41b23;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.bottom {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.payments {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.payIcons {
+  display: flex;
+  gap: 12px;
+}
+
+.payIcon {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .payments {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nlForm {
+    flex-direction: column;
+    border-radius: 12px;
+  }
+
+  .nlBtn {
+    border-radius: 0 0 12px 12px;
+  }
+}

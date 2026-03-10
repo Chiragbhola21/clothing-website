@@ -1,0 +1,98 @@
+.banner {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 4rem 2rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.statNumber {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #e41b23;
+  letter-spacing: 1px;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(228, 27, 35, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(228, 27, 35, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .banner {
+    padding: 3rem 1rem;
+  }
+
+  .divider {
+    display: none;
+  }
+}
